@@ -1,0 +1,1 @@
+Detailview.test.js

@@ -1,8 +1,14 @@
 import React from 'react';
+import './Listview.css';
 
 const Listview = function(props) {
 	var { list } = props;
-	var { data, error, message } = list;
+	var { data, error, message, pending } = list;
+
+	// loader
+	if (pending){
+		return <div className="spinner"></div>;
+	}
 
 	// on error
 	if (!data || error){
@@ -15,6 +21,7 @@ const Listview = function(props) {
 			</tr>
 		)
 	);
+
 	return (
 		<div>
 			<h1 style={{margin:'30px 0px'}}>Upcoming Events: <small className="text-muted">Horse Racing</small></h1>

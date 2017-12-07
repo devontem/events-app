@@ -1,8 +1,14 @@
 import React from 'react';
+import './Detailview.css'
 
 function Detailview(props) {
 	let { detail } = props;
-	let { data, error, message } = detail;
+	let { data, error, message, pending } = detail;
+
+	// loader
+	if (pending){
+		return <div className="spinner"></div>;
+	}
 
 	// on error
 	if (!data || error) {

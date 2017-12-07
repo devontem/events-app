@@ -8,7 +8,7 @@ let middleware;
 
 // setting up middleware
 if (process.env.NPM_CONFIG_PRODUCTION){
-	middleware = applyMiddleware(promise(), thunk, logger)
+	middleware = applyMiddleware(promise(), thunk)
 } else {
 	middleware = applyMiddleware(promise(), thunk, logger)
 }

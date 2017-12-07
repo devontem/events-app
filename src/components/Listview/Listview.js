@@ -1,5 +1,4 @@
 import React from 'react';
-import { NavLink } from 'react-router-dom'
 
 const Listview = function(props) {
 	var { list } = props;

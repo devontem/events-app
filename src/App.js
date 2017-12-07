@@ -12,11 +12,10 @@ class App extends Component {
   render() {
     return (
       <Provider store={store}>
-
         <BrowserRouter>
           <Switch>
-          <Route exact path="/" component={ListviewContainer} />
-          <Route path="/detail/:id" component={DetailviewContainer} />
+            <Route exact path="/" component={ListviewContainer} />
+            <Route path="/detail/:id" component={DetailviewContainer} />
           </Switch>
         </BrowserRouter>
       </Provider>
